@@ -16,6 +16,11 @@ if (!$url || !$id || !$nom || !$pv || !$pa) {
 $req = $co -> prepare("INSERT INTO versus(id, nom, pv, pa, url) VALUES(?,?,?,?,?)");
 $req -> bind_param("sssss",$id, $nom, $pv, $pa, $url);
 $req -> execute();
+echo "Le perso a été ajouté";
+
+$req -> close();
+$co -> close();
+
 
 
 
