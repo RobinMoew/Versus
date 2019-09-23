@@ -4,7 +4,7 @@ let nom = $('#nom').val();
 let pv =  $('#pv').val();
 let pa = $('#pa').val();
 
-$('#').click(function() {
+$('#valid_perso').click(function() {
     $.ajax({
         url:"addPerso.php",
         type:"POST",
