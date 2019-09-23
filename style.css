@@ -19,13 +19,24 @@
   display: flex;
 }
 
-#content form {
+#content > div {
   margin: 2rem;
 }
 
-#create form,
-#versus form {
+#create,
+#versus {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+#success {
+  display: none;
+}
+
+#error {
+  display: none;
+}
+
+#message {
+  height: 10vh;
