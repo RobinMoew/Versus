@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#title {
+  margin-bottom: 2rem;
+}
+
+#content {
+  display: flex;
+}
+
+#content form {
+  margin: 2rem;
+}
+
+#create form,
+#versus form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
