@@ -5,8 +5,4 @@ $pass = "dev2019form";
 $bdd = "nectardedemo_versus";
 
 $co = new mysqli($host, $id, $pass, $bdd);
-
-if ($co->error()) {
-  die(error());
-}
 ?>
