@@ -19,55 +19,32 @@
       <div id="title">
         <h1>Versus ! Fight !</h1>
       </div>
-      <div id="message">
-        <div class="alert alert-success" role="alert" id="success">
-          Perso ajouté !
-        </div>
-        <div class="alert alert-danger" role="alert" id="error">
-          Une erreur est survenue !
-        </div>
-      </div>
       <div id="content">
         <div id="create">
           <div class="form-group">
-            <input type="text" class="form-control" id="nom" placeholder="Nom" required />
+            <input type="text" class="form-control" id="id" placeholder="ID" />
           </div>
           <div class="form-group">
-            <input
-              type="number"
-              class="form-control"
-              id="pv"
-              placeholder="Points de vie"
-              required
-            />
+            <input type="text" class="form-control" id="nom" placeholder="Nom" />
           </div>
           <div class="form-group">
-            <input
-              type="number"
-              class="form-control"
-              id="pa"
-              placeholder="Points d'attaque"
-              required
-            />
+            <input type="number" class="form-control" id="pv" placeholder="Points de vie" />
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" id="url" placeholder="URL image" required />
+            <input type="number" class="form-control" id="pa" placeholder="Points d'attaque" />
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="url" placeholder="URL image" />
           </div>
           <button id="valid_perso" class="btn btn-dark">Valider</button>
         </div>
 
         <div id="versus">
           <div class="form-group">
-            <input type="text" class="form-control" id="id_self" placeholder="ID" required />
+            <input type="text" class="form-control" id="id_self" placeholder="ID" />
           </div>
           <div class="form-group">
-            <input
-              type="text"
-              class="form-control"
-              id="id_versus"
-              placeholder="ID adversaire"
-              required
-            />
+            <input type="text" class="form-control" id="id_versus" placeholder="ID adversaire" />
           </div>
           <button id="valid_versus" class="btn btn-dark">Valider</button>
         </div>
