@@ -18,6 +18,7 @@ $('#valid_versus').click(() => {
       },
       success: function(result) {
         result = JSON.parse(result);
+        console.log(result);
       },
       error: function(error) {
         console.log(error);

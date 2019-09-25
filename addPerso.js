@@ -21,16 +21,14 @@ $('#valid_perso').click(function() {
         pa: pa.val()
       },
       success: function success(result) {
-        if (!result) {
-          $('#success').show();
-          setTimeout(function showMessage() {
-            $('#success').hide();
-          }, 2500);
-          url.val('');
-          nom.val('');
-          pv.val('');
-          pa.val('');
-        }
+        $('#success').show();
+        setTimeout(function showMessage() {
+          $('#success').hide();
+        }, 2500);
+        url.val('');
+        nom.val('');
+        pv.val('');
+        pa.val('');
       },
       error: function erreur(error) {
         $('#error').show();
