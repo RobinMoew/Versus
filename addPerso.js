@@ -5,7 +5,6 @@ $('#valid_perso').click(function() {
   let pv = $('#pv').val();
   let pa = $('#pa').val();
 
-<<<<<<< HEAD
   if (url.val() == '' || nom.val() == '' || pv.val() == '' || pa.val() == '') {
     $('#error').show();
     $('#error').html('Formulaire incomplet');
@@ -38,23 +37,4 @@ $('#valid_perso').click(function() {
       }
     });
   }
-=======
-  $.ajax({
-    url: 'http://localhost/Versus/addPerso.php',
-    type: 'POST',
-    data: {
-      url: url,
-      id: id,
-      nom: nom,
-      pv: pv,
-      pa: pa
-    },
-    success: function success(result) {
-      alert(result);
-    },
-    error: function erreur(error) {
-      console.log(error);
-    }
-  });
->>>>>>> aa929d566f7ca539963ceeec736749c93a96221f
 });

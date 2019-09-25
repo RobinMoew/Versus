@@ -1,6 +1,29 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+progress {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  margin: 1.3rem;
+}
+
+/* IE10 */
+progress {
+  color: green;
+}
+
+/* Firefox */
+progress::-moz-progress-bar {
+  background: green;
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+  background: green;
 }
 
 #main {
@@ -11,21 +34,143 @@
   flex-direction: column;
 }
 
+.alert {
+  display: none;
+}
+
 #title {
+  width: 100%;
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#title h1 {
+  display: flex;
+  flex-direction: column;
+}
+
+#title span {
+  font-size: 4rem;
+  margin: 2rem;
+  color: rgb(131, 3, 3);
+}
+
+#title #left {
+  text-align: left;
+}
+
+#title #right {
+  text-align: right;
 }
 
 #content {
   display: flex;
 }
 
-#content form {
+#content {
   margin: 2rem;
 }
 
-#create form,
-#versus form {
+#create,
+#versus {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin: 2rem;
+}
+
+#images {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#images > img {
+  width: auto;
+  height: 50vh;
+  margin: 0 2rem;
+}
+
+.self_attack {
+  animation-name: self_attack;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+.versus_attack {
+  animation-name: versus_attack;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+}
+
+@keyframes self_attack {
+  0% {
+    transform: none;
+  }
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes versus_attack {
+  0% {
+    transform: none;
+  }
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.rotateIn {
+  animation-name: rotateIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+@keyframes rotateIn {
+  0% {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: center;
+    transform: none;
+    opacity: 1;
+  }
 }
