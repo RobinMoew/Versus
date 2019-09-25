@@ -1,9 +1,8 @@
 $('#valid_perso').click(function() {
-  let url = $('#url').val();
-  let id = $('#id').val();
-  let nom = $('#nom').val();
-  let pv = $('#pv').val();
-  let pa = $('#pa').val();
+  let url = $('#url');
+  let nom = $('#nom');
+  let pv = $('#pv');
+  let pa = $('#pa');
 
   if (url.val() == '' || nom.val() == '' || pv.val() == '' || pa.val() == '') {
     $('#error').show();
@@ -23,6 +22,7 @@ $('#valid_perso').click(function() {
       },
       success: function success(result) {
         $('#success').show();
+        $('#success').html('Perso ajouté !');
         setTimeout(function showMessage() {
           $('#success').hide();
         }, 2500);

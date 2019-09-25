@@ -41,9 +41,25 @@ $(document).ready(() => {
     </div>
   `);
 
+  let self_current_pv;
+  let self_max_pv;
+  let self_current_precentage;
+  let versus_current_pv;
+  let versus_max_pv;
+  let versus_current_precentage;
   let attack = false;
 
   let fight = setInterval(() => {
+    self_current_pv = $('#self_bar').attr('value');
+    self_max_pv = $('#self_bar').attr('max');
+    self_current_precentage = (self_current_pv * 100) / self_max_pv;
+
+    versus_current_pv = $('#versus_bar').attr('value');
+    versus_max_pv = $('#versus_bar').attr('max');
+    versus_current_precentage = (versus_current_pv * 100) / versus_max_pv;
+
+    console.log(self_current_pv, self_max_pv);
+
     $('#self_img').removeClass('rotateIn');
     $('#self_img').removeClass('self_attack');
     $('#versus_img').removeClass('rotateIn');
@@ -77,14 +93,39 @@ $(document).ready(() => {
       }
     }
 
-    if (self_pv <= 0) {
-      $('#self_img').hide();
-      clearInterval(fight);
+    if (self_current_precentage <= 50) {
+      $('#self_bar').addClass('orange');
+    }
+    if (self_current_precentage <= 25) {
+      $('#self_bar').removeClass('orange');
+      $('#self_bar').addClass('red');
     }
 
-    if (versus_pv <= 0) {
-      $('#versus_img').hide();
-      clearInterval(fight);
+    if (versus_current_precentage <= 50) {
+      $('#versus_bar').addClass('orange');
     }
-  }, 2000);
+    if (versus_current_precentage <= 25) {
+      $('#versus_bar').removeClass('orange');
+      $('#versus_bar').addClass('red');
+    }
+
+    if (self_pv <= 0 || versus_pv <= 0) {
+      if (versus_pv <= 0) {
+        $('#versus_img').hide();
+      } else {
+        $('#self_img').hide();
+      }
+      clearInterval(fight);
+      $('#main').append(`
+        <div id="buttons">
+          <a href='../index.html'>Retour</a>
+          <button id='reload'>Re-FIGHT</button>
+        </div>
+      `);
+
+      $('#reload').click(() => {
+        location.reload();
+      });
+    }
+  }, 1500);
 });

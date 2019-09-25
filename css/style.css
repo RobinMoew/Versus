@@ -4,6 +4,26 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+a,
+#reload {
+  color: rgb(41, 41, 41);
+  width: 150px;
+  height: 30px;
+  background-color: rgb(182, 182, 182);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  border: none;
+}
+
+a:hover,
+#reload:hover {
+  text-decoration: none;
+  color: gray;
+  cursor: pointer;
+}
+
 progress {
   appearance: none;
   -moz-appearance: none;
@@ -13,17 +33,41 @@ progress {
 
 /* IE10 */
 progress {
-  color: green;
+  background: rgb(29, 177, 29);
 }
 
 /* Firefox */
 progress::-moz-progress-bar {
-  background: green;
+  background: rgb(29, 177, 29);
 }
 
 /* Chrome */
 progress::-webkit-progress-value {
-  background: green;
+  background: rgb(29, 177, 29);
+}
+
+progress.red::-webkit-progress-bar-value {
+  background-color: red;
+}
+progress.red::-webkit-progress-value {
+  background-color: red;
+}
+
+progress.red {
+  background-color: red;
+  color: red;
+}
+
+progress.orange::-webkit-progress-bar-value {
+  background-color: rgb(255, 187, 0);
+}
+progress.orange::-webkit-progress-value {
+  background-color: rgb(255, 187, 0);
+}
+
+progress.orange {
+  background-color: rgb(255, 187, 0);
+  color: rgb(255, 187, 0);
 }
 
 #main {
@@ -65,6 +109,10 @@ progress::-webkit-progress-value {
   text-align: right;
 }
 
+#message {
+  height: 15vh;
+}
+
 #content {
   display: flex;
 }
@@ -90,6 +138,13 @@ progress::-webkit-progress-value {
   width: auto;
   height: 50vh;
   margin: 0 2rem;
+}
+
+#buttons {
+  width: 50vw;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .self_attack {
