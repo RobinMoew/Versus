@@ -6,6 +6,10 @@ body {
   width: 98vw;
 }
 
+#add {
+  color: white;
+}
+
 #valid_perso {
   /* background: none; */
   border: none;
@@ -50,6 +54,7 @@ body {
   height: 151px;
   left: 4px;
   position: absolute;
+  cursor: pointer;
 }
 
 .menu {
@@ -83,10 +88,6 @@ a:nth-child(1) {
 a:nth-child(2) {
   top: 10px;
   left: 97px;
-}
-#valid_versus {
-  height: auto;
-  width: 100px;
 }
 
 a:nth-child(3) {
@@ -245,11 +246,9 @@ progress.orange {
   margin: 2rem;
 }
 
-#create,
-#versus {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem;
+#valid_versus {
+  height: auto;
+  width: 100px;
 }
 
 #images {
