@@ -257,3 +257,10 @@ progress.orange {
     opacity: 1;
   }
 }
+.one_selected {
+  border: solid 4px rgb(51, 250, 101);
+}
+
+.second_selected {
+  border: solid 4px rgb(209, 34, 34);
+}

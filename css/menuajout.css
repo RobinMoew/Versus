@@ -7,23 +7,27 @@ body {
 }
 
 #valid_perso {
-  background: none;
+  /* background: none; */
   border: none;
+  background: #1e535f;
   outline: none;
+  border-radius: 60px;
+  width: 30px;
+  color: white;
+  height: 30px;
 }
-
 .toggle {
-  background-color: #c87f8a;
+  background-color: #1e535f;
   text-align: center;
   height: 100px;
   width: 100px;
   border-radius: 50%;
   position: absolute;
   margin: auto;
-  top: 0px;
-  bottom: 0px;
+  top: 285px;
   left: 0px;
   right: 0px;
+  z-index: 10;
 }
 
 #message {
@@ -58,11 +62,10 @@ body {
   border-color: #c87f8a;
   position: absolute;
   margin: auto;
-  top: 0px;
-  bottom: 0px;
+  top: 285px;
   left: 0px;
   right: 0px;
-  z-index: -1;
+  z-index: 5;
   transition: 0.7s;
 }
 
@@ -73,28 +76,30 @@ a {
   color: #bbbbbb;
 }
 a:nth-child(1) {
-  top: -32px;
+  left: 74px;
+  top: -20px;
+  /* right: 0px; */
 }
-
 a:nth-child(2) {
   top: 10px;
-  left: 76px;
+  left: 97px;
+}
+#valid_versus {
+  height: auto;
 }
 
 a:nth-child(3) {
-  top: 60px;
-  left: 76px;
+  top: 46px;
+  left: 97px;
 }
 
 a:nth-child(4) {
-  top: 100px;
-  left: 0px;
+  top: 80px;
+  left: 75px;
 }
-
 a:nth-child(5) {
-  top: 36px;
-  /* left: 10px; */
-  right: 70px;
+  top: 30px;
+  
 }
 
 a:nth-child(6) {
@@ -111,7 +116,16 @@ a:hover {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-a,
+button, input {
+  overflow: visible;
+  width: 5vw;
+  font-size: 6px;
+  height: 15px;
+  text-align: center;
+  outline: none;
+  border-radius: 60px;
+  border: none;
+}
 #reload {
   color: rgb(41, 41, 41);
   width: 172px;
@@ -178,7 +192,7 @@ progress.orange {
 }
 
 #main {
-  min-height: 100vh;
+  min-height: 125vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -356,10 +370,4 @@ progress.orange {
     transform: none;
     opacity: 1;
   }
-}
-* {
-  padding: 0;
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  width: 90%;
 }
