@@ -1,29 +1,34 @@
 $(document).ready(() => {
-  $('#valid_versus').click(() => {
-    let idVersus = $('#id_versus').val();
-    let idSelf = $('#id_self').val();
+  $.ajax({
+    url: 'http://localhost/Versus/getAllPerso.php',
+    type: 'GET',
+    success: function(result) {
+      result = JSON.parse(result);
 
-    $.ajax({
-      url: 'http://localhost/Versus/getAllPerso.php',
-      type: 'GET',
-      success: function(result) {
-        result = JSON.parse(result);
-
-        localStorage.setItem('self_name', result[0].nom);
-        localStorage.setItem('self_pv', result[0].pv);
-        localStorage.setItem('self_pa', result[0].pa);
-        localStorage.setItem('self_url', result[0].url);
-
-        localStorage.setItem('versus_name', result[1].nom);
-        localStorage.setItem('versus_pv', result[1].pv);
-        localStorage.setItem('versus_pa', result[1].pa);
-        localStorage.setItem('versus_url', result[1].url);
-
-        window.location.replace('html/fight.html');
-      },
-      error: function(error) {
-        console.log(error);
+      for (let i = 0; i < result.length; i++) {
+        $('#fighters').append(`
+          <div class="fighter" id='${result[i].id}'>
+            <img src="${result[i].url}" />
+            <div class="text">
+              <span>${result[i].nom} - </span>
+              <span>${result[i].id}</span>
+            </div>
+          </div>
+        `);
       }
-    });
+
+      $('.fighter').click((event) => {
+        let clickedFighter = event.currentTarget;
+        let idFighter = clickedFighter.getAttribute('id');
+        if ($('#id_self').val() == '') {
+          $('#id_self').val(idFighter);
+        } else {
+          $('#id_versus').val(idFighter);
+        }
+      });
+    },
+    error: function(error) {
+      console.log(error);
+    }
   });
 });
