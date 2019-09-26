@@ -84,7 +84,7 @@ progress.orange {
 
 #title {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -110,7 +110,7 @@ progress.orange {
 }
 
 #message {
-  height: 15vh;
+  height: 5vh;
 }
 
 #content {
@@ -121,8 +121,7 @@ progress.orange {
   margin: 2rem;
 }
 
-#create,
-#versus {
+#create {
   display: flex;
   flex-direction: column;
   margin: 2rem;
@@ -145,6 +144,35 @@ progress.orange {
   margin-top: 2rem;
   display: flex;
   justify-content: space-evenly;
+}
+
+#fighters {
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  margin-bottom: 2rem;
+}
+
+#fighters .fighter > img {
+  width: auto;
+  height: 100px;
+  margin-bottom: 1.2rem;
+}
+
+.fighter {
+  cursor: pointer;
+  margin: 2rem;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
+
+.one_selected {
+  border: solid 4px rgb(51, 250, 101);
+}
+
+.second_selected {
+  border: solid 4px rgb(209, 34, 34);
 }
 
 .self_attack {
