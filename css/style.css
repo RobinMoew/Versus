@@ -121,8 +121,7 @@ progress.orange {
   margin: 2rem;
 }
 
-#create,
-#versus {
+#create {
   display: flex;
   flex-direction: column;
   margin: 2rem;
@@ -151,6 +150,7 @@ progress.orange {
   width: 100%;
   overflow: auto;
   white-space: nowrap;
+  margin-bottom: 2rem;
 }
 
 #fighters .fighter > img {
@@ -164,6 +164,15 @@ progress.orange {
   margin: 2rem;
   display: inline-block;
   text-align: center;
+  padding: 10px;
+}
+
+.one_selected {
+  border: solid 4px rgb(51, 250, 101);
+}
+
+.second_selected {
+  border: solid 4px rgb(209, 34, 34);
 }
 
 .self_attack {
