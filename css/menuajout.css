@@ -24,7 +24,7 @@ body {
   border-radius: 50%;
   position: absolute;
   margin: auto;
-  top: 285px;
+  top: 40px;
   left: 0px;
   right: 0px;
   z-index: 10;
@@ -62,7 +62,7 @@ body {
   border-color: #c87f8a;
   position: absolute;
   margin: auto;
-  top: 285px;
+  top: 40px;
   left: 0px;
   right: 0px;
   z-index: 5;
@@ -197,6 +197,7 @@ progress.orange {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .alert {
@@ -375,4 +376,12 @@ progress.orange {
     transform: none;
     opacity: 1;
   }
+}
+
+p {
+  margin-top: -28px;
+  margin-bottom: 2rem;
+  /* color: white; */
+  font-size: 1em;
+  font-weight: bold;
 }
