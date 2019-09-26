@@ -1,17 +1,17 @@
-body{
+body {
   background-color: #1e535f;
   padding: 0px;
   margin: 0px;
   overflow: hidden;
-  width: 98vw;;
- 
+  width: 98vw;
 }
-#valid_perso {
 
+#valid_perso {
   background: none;
   border: none;
   outline: none;
 }
+
 .toggle {
   background-color: #c87f8a;
   text-align: center;
@@ -25,6 +25,7 @@ body{
   left: 0px;
   right: 0px;
 }
+
 #message {
   display: flex;
   justify-content: center;
@@ -33,18 +34,17 @@ body{
   width: auto;
 }
 
-
-.fa-plus{
+.fa-plus {
   font-size: 120px;
   color: white;
   display: block;
-  
   transition: 0.7s;
 }
+
 #plus {
- bottom: 0px;
+  bottom: 0px;
   height: 151px;
-left: 4px;
+  left: 4px;
   position: absolute;
 }
 
@@ -70,7 +70,7 @@ a {
   display: inline-block;
   position: absolute;
   font-size: 15px;
-  color: #BBBBBB;
+  color: #bbbbbb;
 }
 a:nth-child(1) {
   top: -32px;
@@ -81,12 +81,12 @@ a:nth-child(2) {
   left: 76px;
 }
 
-a:nth-child(3){
+a:nth-child(3) {
   top: 60px;
   left: 76px;
 }
 
-a:nth-child(4){
+a:nth-child(4) {
   top: 100px;
   left: 0px;
 }
@@ -97,7 +97,7 @@ a:nth-child(5) {
   right: 70px;
 }
 
-a:nth-child(6){
+a:nth-child(6) {
   top: 23px;
   left: 12px;
 }
@@ -115,7 +115,7 @@ a,
 #reload {
   color: rgb(41, 41, 41);
   width: 172px;
- 
+
   background-color: rgb(182, 182, 182);
   display: flex;
   justify-content: center;
@@ -252,6 +252,27 @@ progress.orange {
   margin-top: 2rem;
   display: flex;
   justify-content: space-evenly;
+}
+
+#fighters {
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  margin-bottom: 2rem;
+}
+
+#fighters .fighter > img {
+  width: auto;
+  height: 100px;
+  margin-bottom: 1.2rem;
+}
+
+.fighter {
+  cursor: pointer;
+  margin: 2rem;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
 }
 
 .self_attack {
