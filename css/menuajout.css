@@ -99,7 +99,6 @@ a:nth-child(4) {
 }
 a:nth-child(5) {
   top: 30px;
-  
 }
 
 a:nth-child(6) {
@@ -116,7 +115,8 @@ a:hover {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-button, input {
+button,
+input {
   overflow: visible;
   width: 5vw;
   font-size: 6px;
@@ -209,6 +209,7 @@ progress.orange {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  color: white;
 }
 
 #title h1 {
@@ -287,6 +288,10 @@ progress.orange {
   display: inline-block;
   text-align: center;
   padding: 10px;
+}
+
+.fighter > .text {
+  color: white;
 }
 
 .self_attack {
