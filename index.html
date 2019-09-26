@@ -1,62 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Versus</title>
-  </head>
-  <body>
-    <div id="main">
-      <div id="title">
-        <h1>Versus ! Fight !</h1>
-      </div>
-      <div id="message">
-        <div id="success" class="alert alert-success" role="alert">test</div>
-        <div id="error" class="alert alert-danger" role="alert"></div>
-      </div>
-      <div id="content">
-        <div id="create">
-          <div class="form-group">
-            <input type="text" class="form-control" id="nom" placeholder="Nom" />
-          </div>
-          <div class="form-group">
-            <input type="number" class="form-control" id="pv" placeholder="Points de vie" />
-          </div>
-          <div class="form-group">
-            <input type="number" class="form-control" id="pa" placeholder="Points d'attaque" />
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" id="url" placeholder="URL image" />
-          </div>
-          <button id="valid_perso" class="btn btn-dark">Valider</button>
+    <head>
+      <link rel="stylesheet" href="css/menuajout.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <link rel="stylesheet" href="../css/menuajout.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Add Menu</title>
+    </head>
+    
+    <body>
+     
+        <div id="message">
+            <div id="success" class="alert alert-success" role="alert">test</div>
+            <div id="error" class="alert alert-danger" role="alert"></div>
         </div>
-
-        <div id="versus">
-          <div class="form-group">
-            <input type="number" class="form-control" id="id_self" placeholder="ID" required />
-          </div>
-          <div class="form-group">
-            <input
-              type="number"
-              class="form-control"
-              id="id_versus"
-              placeholder="ID adversaire"
-              required
-            />
-          </div>
+        <div class="toggle" id="toggle" onclick="menu-expand()">
+            <i class="fa fa-plus" id="plus">+</i>
+        </div>
+        <div class="menu" id="menu">
+            <a href="#">
+                <input class="fa fa-microphone" type="text" class="form-control" id="nom" placeholder="Nom" />
+    
+            </a>
+            <a href="#">
+                <input class="fa fa-user" type="number" class="form-control" id="pv" placeholder="Points de vie" />
+            </a>
+            <a href="#">
+                <input class="fa fa-video-camera" type="number" class="form-control" id="pa"
+                    placeholder="Points d'attaque" />
+            </a>
+            <a href="#">
+                <input class="fa fa-envelope" type="text" class="form-control" id="url" placeholder="URL image" />
+            </a>
+            <a href="#">
+                <button class="fa fa-camera" id="valid_perso" class="btn btn-dark">Valider</button>
+            </a>
+    
+        </div>
+        
           <button id="valid_versus" class="btn btn-dark">Valider</button>
         </div>
       </div>
-    </div>
+  
+   
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -71,5 +61,7 @@
     <script src="getPerso.js"></script>
     <script src="addPerso.js"></script>
     <script src="getAllPerso.js"></script>
+    <script src="js/menuajout.js"></script>
+  
   </body>
 </html>
